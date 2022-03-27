@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+    <label for="sign-images">Choose a greeting: </label>
+    <select name="sign-images" id="sign-images" onchange="" >
+        <option value="hello">Hello</option>
+        <option value="hyd">How you doing?</option>
+    </select>
+    <p><input type="submit" value="Submit" />
+</form>
+
+<div style="hidden: true">
+    <img src="">
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        $('#sign-images').on("change", function() {
+            console.log('test');
+            // your ajax call
+        });
+    });
+</script>
